@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanwal  Interiors</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+
+  .navigation-bar {
+    position:relative;
+  width: 100%;
+  height: 90px;
+  flex-shrink: 0;
+  background: #FFF;
+  box-shadow: 52px -52px 52px 0px rgba(165, 165, 165, 0.15) inset, -52px 52px 52px 0px rgba(255, 255, 255, 0.15) inset;
+  backdrop-filter: blur(89.44000244140625px);
+}
+.logo {
+  position: absolute;
+  left: 80px;
+  top: 26.26px;
+}
+
+
+.menu-item {
+  position: absolute;
+  color: #000B48;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.menu-item.home {
+  text-decoration-line: underline;
+  left: 273.33px; /* Adjust as needed */
+  top: 35.76px; /* Adjust as needed */
+}
+
+.menu-item.why-us {
+  left: 357.73px; /* Adjust as needed */
+  top: 35.76px; /* Adjust as needed */
+}
+
+.menu-item.services {
+  left: 455.13px; /* Adjust as needed */
+  top: 35.76px; /* Adjust as needed */
+}
+
+.menu-item.our-team {
+  left: 553.53px; /* Adjust as needed */
+  top: 35.76px; /* Adjust as needed */
+}
+
+.menu-item.export-products {
+  left: 667.93px; /* Adjust as needed */
+  top: 35.76px; /* Adjust as needed */
+}
+
+.menu-item.contact-us {
+  left: 832.33px; /* Adjust as needed */
+  top: 35.76px; /* Adjust as needed */
+}
+.search-container {
+  position: relative;
+  top: 33px; /* Adjust as needed */
+  left: 1095px; /* Adjust as needed */
+}
+
+.search-icon {
+  width: 24px; /* Adjust as needed */
+  height: 24px; /* Adjust as needed */
+}
+    .get-in-touch {
+        position: absolute;
+        display: inline-block;
+        color: #000B48;
+        border: 3px solid black;
+        right:171px;
+        top:24px;
+        padding: 7px 10px;
+        margin: 4px;
+        text-decoration: none;
+        border-radius: 20px / 50%; /*Horizontal radius: 25px, Vertical radius: 50%*/
+    }
+
+
+
+
+    .get-in-touch:hover {
+        background-color: #0056b3;
+    }
+
+    .hero-section {
+  width: 100%;
+  height: 699px;
+  background: #FFF;
+  position: relative;
+  top: 90px; /*Adjust this value to match the height of your navigation bar*/
+}
+
+
+.logo_hero{
+  width: 110.657px;
+  height: 116.632px;
+  position: absolute;
+  top: 159px;
+  left: 355px;
+}
+
+.hero-text {
+  color: #000B48;
+  text-align: center;
+  font-family: Georgia;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  left: 155px;
+  top: 265px; /* Adjusted for the navigation bar height */
+}
+.designs {
+  width: 241px;
+  color: #000B48;
+  text-align: center;
+  font-family: "Expletus Sans";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  left: 298px;
+  bottom: 265px; /* Adjusted for the navigation bar height */
+}
+.premier-partner-text {
+  width: 541px;
+  color: #000B48;
+  text-align: center;
+  font-family: "Expletus Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.6%; /* 36.144px */
+  position: absolute;
+  left: 145px; /* Center horizontally */
+  bottom: 185px; /* Adjusted for the navigation bar height */
+}
+
+.hero-section {
+  position: relative;
+  width: 1440px;
+  height: 699px;
+  background: #FFF;
+}
+
+.button {
+  position: absolute;
+  left: 314px;
+  bottom: 58px;
+  display: flex;
+  height: 30px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #EC5353;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes none {
+  from {}
+  to {}
+}
+.button {
+  animation: none;
+}
+
+</style>
+
+<body>
+  <section>
+  <div class="navigation-bar">
+    <img src="logo.jpg" alt="Icon" width="47" height="38" class="logo">
+    <div class="menu-item home">Home</div>
+    <div class="menu-item why-us">Why Us</div>
+    <div class="menu-item services">Services</div>
+    <div class="menu-item our-team">Our Team</div>
+    <div class="menu-item export-products">Export Products</div>
+    <div class="menu-item contact-us">Contact Us</div>
+    <div class="search-container">
+      <input type="text" id="searchField" placeholder="Search..." style="display: none;">
+      <img src="search.jpeg" alt="Search" id="searchIcon" class="search-icon">
+    </div>
+    <div class="get-in-touch">Get In Touch</a>
+    </section>
+    <section>
+      <div class="hero-section"></div>
+      <img src="logo.jpg" alt="Logo" class="logo_hero">
+      <div class="hero-text">SANWAL</div>
+      <div class="designs">Designs</div>
+      <div class="premier-partner-text">Your Premier Global Partner For Innovative Design Solutions.</div>
+      <div class="button" onclick="openOverlay('Form')">Book Free Consultation</div>
+      
+    </section>
+      
+      
+    
+    <!-- Navigation content will be added here -->
+  </div>
+
+  <script>
+    const searchIcon = document.getElementById("searchIcon");
+const searchField = document.getElementById("searchField");
+
+searchIcon.addEventListener("click", function() {
+  searchIcon.style.display = "none";
+  searchField.style.display = "block";
+});
+
+
+// function openOverlay(overlayName) {
+//   // Function to open the overlay with the specified name
+//   console.log("Opening overlay: " + overlayName);
+// }
+
+
+
+
+
+  </script>
+</body>
+</html>

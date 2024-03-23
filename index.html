@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanwal Designs</title>
+<style>
+    /* Basic Styles */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .logo {
+        display: left;
+        width: 50px; /* Adjust as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 30px; /* Adjust spacing */
+    }
+
+    .hero-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 50px;
+        background-color: #f8f8f8;
+    }
+    .hero-content {
+        flex: 1;
+    }
+    .hero-content h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    .hero-content p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .btn-book-consultation {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .btn-book-consultation:hover {
+        background-color: #0056b3;
+    }
+    .services {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .service-column {
+        flex: 1;
+        text-align: center;
+    }
+    .service-column img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    /* Navigation Bar Styles */
+    .navbar {
+        background-color: #fff;
+        overflow: hidden;
+        padding: 20px 50px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .navbar a {
+        display: inline-block;
+        color: #333;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+    .navbar a:hover {
+        background-color: #f2f2f2;
+    }
+    
+    .get-in-touch {
+        float: right;
+        display: inline-block;
+        color: #fff;
+        border: 3px solid black;
+        padding: 14px 20px;
+        margin: 8px;
+        text-decoration: none;
+        border-radius: 25px / 50%; /* Horizontal radius: 25px, Vertical radius: 50% */
+    }
+
+
+
+
+    .get-in-touch:hover {
+        background-color: #0056b3;
+    }
+    .search-container {
+        float: right;
+        position: absolute;
+        top: 7%;
+        right:13%;
+        transform: translateX(-50%);
+    }
+    .search-container input[type=text] {
+        padding: 10px 30px 10px 10px;
+        font-size: 17px;
+        border: bold;
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+    
+  .about-us-container {
+    position: relative;
+    width: 100%;
+    /* height: 500px; */
+    background-image: url('bg.jpeg'); /* Background image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    padding: 20px;
+  }
+
+  .about-us-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    text-align: center;
+    width: 97%;
+  }
+
+
+
+  .about-us-content h2 {
+      color: #333;
+  }
+
+  .about-us-content p {
+      color: #333;
+  }
+
+  #view-more-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+    .search-container img {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .tape-strap {
+    width: 100%;
+    height: 50px; /* Adjust as needed */
+    overflow: hidden;
+    position: relative;
+    background-color: yellow; /* Background color for the tape */
+    border: 1px solid #ccc; /* Border for the tape */
+    top: 0;
+    left: 0;
+    transform: skew(-20deg);
+  }
+
+  .tape-content {
+      white-space: nowrap; /* Prevent data from wrapping */
+      position: absolute;
+      overflow: hidden;
+      top:50%;
+      left:0;
+      transform: translateY(-50%);
+       /* Adjust animation duration as needed */
+  }
+
+  .tape-data {
+      display: inline-block;
+      color: black;
+      padding-right: 20px; /* Space between data */
+      animation:  tapeScroll 10s linear infinite;
+  }
+
+  @keyframes tapeScroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+  } 
+  @keyframes moveTopToBottom {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(100%); }
+    }
+
+    /* Animation for middle service column */
+    @keyframes moveBottomToTop {
+        0% { transform: translateY(100%); }
+        100% { transform: translateY(-100%); }
+    }
+
+    .service-column:nth-child(1),
+    .service-column:nth-child(3) {
+        animation: moveTopToBottom 5s ease infinite alternate;
+    }
+
+    .service-column:nth-child(2) {
+        animation: moveBottomToTop 5s ease infinite alternate;
+    }
+
+    .background-section {
+        position: relative;
+        display: center;
+        height: 400px; /* Adjust height as needed */
+        left:2%;
+        right:5%;
+        background-image: url('global.png'); /* Background image */
+        background-size: cover; /* Cover the entire container */
+        background-position: center; /* Center the background image */
+        z-index: -1;
+    }
+
+    .contact-button {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: hsla(52, 93%, 48%, 0.89);
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+
+
+</style>
+</head>
+<body>
+
+
+
+<div class="navbar">
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <a href="#home">Home</a>
+    <a href="#whyus">Why Us</a>
+    <a href="#ourteam">Our Team</a>
+    <a href="#exportproducts">Export Products</a>
+    <a href="#contactus">Contact Us</a>
+    <div class="search-container">
+        <input type="text" id="searchField" placeholder="Search..." style="display: none;">
+        <img src="search.jpeg" alt="Search" id="searchIcon">
+    </div>
+    <a href="#" class="get-in-touch">Get In Touch</a>
+</div>
+
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>Welcome to Sanwal Designs</h1>
+        <p>We offer top-notch design services tailored to your needs.</p>
+        <a href="#" class="btn-book-consultation">Book a Free Consultation</a>
+    </div>
+    <div class="services">
+        <div class="service-column">
+            <img src="service1.jpeg" alt="Service 1">
+            <!-- <p>Service</p> -->
+        </div>
+        <div class="service-column">
+            <img src="service2.jpeg" alt="Service 2">
+            <!-- <p>Service 2 Description</p> -->
+        </div>
+        <div class="service-column">
+            <img src="service3.jpeg" alt="Service 3">
+            <!-- <p>Service 3 Description</p> -->
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="about-us-section">
+      <div class="about-us-content">
+          <h2>About Us</h2>
+          <p>This is a brief introduction about our company.</p>
+          <button id="view-more-btn">View More</button>
+      </div>
+      
+</section>
+
+<!-- <div class="tape-strap">
+  <div class="tape-content">
+      <span class="tape-data">Your data here...</span>
+      <!-- Repeat this span for more data -->
+  <!--</div>
+</div> -->
+
+<!-- <section class="background-section">
+    
+    <button class="contact-button">Get In Touch</button>
+ </section> -->
+<!-- <section>
+    <div>
+        <h2>We are global now!!</h2>
+        <p>As a leading designer agency, we are creating impactful designs</p>
+        <button class="contact-button">Get In Touch</button>
+    </div>
+</section>  -->
+
+
+
+<script>
+    document.getElementById("searchIcon").addEventListener("click", function() {
+        var searchField = document.getElementById("searchField");
+        if (searchField.style.display === "none") {
+            searchField.style.display = "inline-block";
+        } else {
+            searchField.style.display = "none";
+        }
+    });
+    document.getElementById("view-more-btn").addEventListener("click", function() {
+    // Remove background image
+    document.querySelector('.about-us-section').style.backgroundImage = 'none';
+    // Show more content (you can add more content or animation as needed)
+    document.querySelector('.about-us-content').innerHTML = `
+        <h2>About Us</h2>
+        <p>This is a brief introduction about our company. We provide...</p>
+        <p>A design is a concept of or proposal </p>
+    `;
+});
+
+</script>
+
+</body>
+</html>
